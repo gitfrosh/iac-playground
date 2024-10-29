@@ -10,6 +10,7 @@ terraform {
 
 provider "azurerm" {
   # Configuration options
+  subscription_id = "bea14c12-2f72-4158-a8e0-1b196267677d"
 
   # features is required
   features {
