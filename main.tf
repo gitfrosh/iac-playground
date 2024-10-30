@@ -101,3 +101,24 @@ resource "azurerm_windows_virtual_machine" "twvm" {
     version   = "latest"
   }
 }
+
+resource "azurerm_kubernetes_cluster" "twk8s" {
+  name                = "miau"
+  location            = azurerm_resource_group.twrg.location
+  resource_group_name = azurerm_resource_group.twrg.name
+  dns_prefix          = "exampleaks1"
+
+  default_node_pool {
+    name       = "default"
+    node_count = 1
+    vm_size    = "Standard_D2_v2"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  tags = {
+    Environment = "Production"
+  }
+}
