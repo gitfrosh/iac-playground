@@ -5,6 +5,10 @@ terraform {
       version = "4.7.0" # also possible e.g. ~>4.7
       # if a new version should be used, the lock file must be removed
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "3.6.3"
+    }
   }
 }
 

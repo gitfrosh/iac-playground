@@ -3,7 +3,7 @@ az account show
 
 - terraform fmt (formatieren)
 
-- terraform init (Backend initialisieren)
+- terraform init (Backend initialisieren, Provider downloaden, z. B. auch Statedatei nach Storage schieben)
 
 - terraform validate (Validation of syntax etc.)
 
@@ -15,3 +15,11 @@ az account show
 - terraform apply (enthält auch das plan) bzw.
 - terraform apply -auto-approve
 - terraform apply main.tfplan
+
+- terraform show (alle Ressourcen anzeigen)
+
+- terraform state list
+
+- terraform state show azurerm_resource_group.twrg
+
+- terraform destroy oder terraform apply -destroy (komplett Infrastrutkur entfernen)
